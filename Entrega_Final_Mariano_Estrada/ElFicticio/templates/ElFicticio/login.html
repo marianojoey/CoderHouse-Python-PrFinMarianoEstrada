@@ -1,0 +1,27 @@
+{% extends "ElFicticio/padre.html" %}
+
+{% load static %}
+
+{% block Etiqueta %}
+
+El Ficticio
+
+{% endblock %}
+
+{% block Titulo %}
+
+<h1>PERIÓDICO EL FICTICIO</h1>
+<span class="subheading">Ingrese al sistema.</span>
+
+{% endblock %}
+
+
+{% block Descripcion %}
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button type="submit">Iniciar Sesión</button>
+
+</form>
+{% endblock %}
