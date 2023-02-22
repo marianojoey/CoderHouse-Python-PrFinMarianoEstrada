@@ -2,16 +2,29 @@
 
 {% load static %}
 
-{% block Etiqueta %}
+{% block encabezado %}
 
-El Ficticio
+<!-- Page Header - ACÁ ESTÁ UNO DE LOS PROBLEMAS-->
 
-{% endblock %}
+<!--Idealmente, tengo que hacer algo con la "url" que aparece acá abajo para que siga mostrando la imagen, pero Django parece no dar bolilla-->
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
 
-{% block Titulo %}
+    <!--la línea de imagen que sigue la agregué retocándola un poco de la preentrega 3, y poniéndola así logro que salga la imagen, pero 
+    no puedo hacer que quede como en la página original.-->
+    <img class="masthead-avatar mb-5" src="{% static 'ElFicticio/assets/img/home-bg.jpg' %}" alt="..." />
 
-<h1>PERIÓDICO EL FICTICIO</h1>
-<span class="subheading">Donde las noticias suelen ser falsas y buenas.</span>
+
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>PERIÓDICO EL FICTICIO</h1>
+                    <span class="subheading">Donde las noticias suelen ser falsas y buenas.</span>                            
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 {% endblock %}
 
