@@ -4,16 +4,9 @@
 
 {% block encabezado %}
 
-<!-- Page Header - ACÁ ESTÁ UNO DE LOS PROBLEMAS-->
+<!-- Page Header -->
 
-<!--Idealmente, tengo que hacer algo con la "url" que aparece acá abajo para que siga mostrando la imagen, pero Django parece no dar bolilla-->
-<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
-
-    <!--la línea de imagen que sigue la agregué retocándola un poco de la preentrega 3, y poniéndola así logro que salga la imagen, pero 
-    no puedo hacer que quede como en la página original.-->
-    <img class="masthead-avatar mb-5" src="{% static 'ElFicticio/assets/img/home-bg.jpg' %}" alt="..." />
-
-
+<header class="masthead" style="background-image: url({% static 'ElFicticio/assets/img/home-bg.jpg' %})">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
@@ -29,12 +22,15 @@
 {% endblock %}
 
 {% block Descripcion %}
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
 
     <!-- Post preview-->
         <div class="post-preview">
             <a href="{% url 'Publicaciones' %}">
-                <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-                <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
+                <h2 class="post-title">El hombre debe explorar, y esta es la exploración en su máxima expresión.</h2>
+                <h3 class="post-subtitle">Los problemas parecen muy pequeños desde 240 kilómetros de altura.</h3>
             </a>
             <p class="post-meta">
                 Posted by
@@ -46,7 +42,9 @@
             <hr class="my-4" />
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="{% url 'Publicaciones' %}"><h2 class="post-title">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2></a>
+                <a href="{% url 'Inexistente' %}"><h2 class="post-title">Creo que cada ser humano tiene un número finito de latidos del corazón.</h2>
+                    <h3 class="post-subtitle">No tengo la intención de desperdiciar ninguno de los míos.</h3>
+                </a>
                 <p class="post-meta">
                     Posted by
                     <a href="#!">Start Bootstrap</a>
@@ -57,9 +55,9 @@
             <hr class="my-4" />
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="{% url 'Publicaciones' %}">
-                    <h2 class="post-title">Science has not yet mastered prophecy</h2>
-                    <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</h3>
+                <a href="{% url 'Inexistente' %}">
+                    <h2 class="post-title">La ciencia aún no ha dominado la profecía.</h2>
+                    <h3 class="post-subtitle">Predecimos demasiado para el próximo año y, sin embargo, demasiado poco para los próximos diez.</h3>
                 </a>
                 <p class="post-meta">
                     Posted by
@@ -71,9 +69,9 @@
             <hr class="my-4" />
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="{% url 'Publicaciones' %}">
-                    <h2 class="post-title">Failure is not an option</h2>
-                    <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
+                <a href="{% url 'Inexistente' %}">
+                    <h2 class="post-title">Fallar no es una opción</h2>
+                    <h3 class="post-subtitle">Muchos dicen que la exploración es parte de nuestro destino, pero en realidad es nuestro deber para con las generaciones futuras.</h3>
                 </a>
                 <p class="post-meta">
                     Posted by
@@ -83,9 +81,8 @@
             </div>
             <!-- Divider-->
             <hr class="my-4" />
-            <!-- Pager-->
-            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
-
+    </div>
+</div>
 {% endblock %}
 
 {% block Footer %}
@@ -96,23 +93,7 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <ul class="list-inline text-center">
                     <li class="list-inline-item">
-                        <a href="#!">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#!">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#!">
+                        <a href="https://www.github.com">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -120,7 +101,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; Marianojoey 2023</div>
             </div>
         </div>
     </div>

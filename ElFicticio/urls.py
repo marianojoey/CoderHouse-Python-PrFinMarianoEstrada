@@ -1,4 +1,5 @@
 from django.urls import path
+
 from ElFicticio.views import *
 from django.contrib.auth.views import LogoutView
 
@@ -11,4 +12,5 @@ urlpatterns = [
     path("registro/",v_registro,name="Registro"),    
     path("logout",LogoutView.as_view(template_name="ElFicticio/logout.html"),name="Logout"),
     path("editar/",v_editar,name="Editar"),
+    path("inexistente/",v_inexistente,name="Inexistente"),
 ]
