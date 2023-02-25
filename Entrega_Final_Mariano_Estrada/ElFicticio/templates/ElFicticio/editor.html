@@ -5,15 +5,9 @@
 {% block encabezado %}
 
 
-<!-- Page Header - ACÁ ESTÁ UNO DE LOS PROBLEMAS-->
+<!-- Page Header -->
 
-<!--Idealmente, tengo que hacer algo con la "url" que aparece acá abajo para que siga mostrando la imagen, pero Django parece no dar bolilla-->
-<header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
-
-    <!--la línea de imagen que sigue la agregué retocándola un poco de la preentrega 3, y poniéndola así logro que salga la imagen, pero 
-    no puedo hacer que quede como en la página original.-->
-    <img class="masthead-avatar mb-5" src="{% static 'ElFicticio/assets/img/about-bg.jpg' %}" alt="..." />
-
+<header class="masthead" style="background-image: url({% static 'ElFicticio/assets/img/about-bg.jpg' %})">
 
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">

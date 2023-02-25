@@ -57,3 +57,6 @@ def v_contacto(request):
 @login_required
 def v_editar(request):
     return render(request, "ElFicticio/editar.html")
+
+def v_inexistente(request):
+    return render(request, "ElFicticio/inexistente.html")
